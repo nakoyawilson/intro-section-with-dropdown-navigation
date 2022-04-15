@@ -3,6 +3,7 @@
 :root {
   --font: "Epilogue", sans-serif;
   --white: hsl(0, 0%, 98%);
+  --pure-white: hsl(0, 0%, 100%);
   --medium-gray: hsl(0, 0%, 41%);
   --black: hsl(0, 0%, 8%);
   --black-transparent: hsla(0, 0%, 8%, 0.75);
@@ -138,8 +139,75 @@ img {
   margin-bottom: auto;
 }
 
+.nav-link-wrapper:nth-of-type(1) .nav-link.active::after,
+.nav-link-wrapper:nth-of-type(2) .nav-link.active::after {
+  background-image: url("../images/icon-arrow-up.svg");
+}
+
 .member-links {
   display: none;
+}
+
+.features-links,
+.company-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  display: none;
+}
+
+.nav-link-wrapper:nth-of-type(1) .nav-link.active + .features-links,
+.nav-link-wrapper:nth-of-type(2) .nav-link.active + .company-links {
+  display: flex;
+}
+
+.features-links {
+  margin: 2.4rem auto 0.8rem 5.7rem;
+}
+
+.company-links {
+  margin: 1.8rem auto 0.8rem 2.4rem;
+}
+
+.nav-link-wrapper:nth-of-type(1) .feature-links .nav-link::after {
+  right: auto;
+}
+
+.features-links .nav-link.todo::after {
+  width: 1.75rem;
+  height: 2rem;
+  left: -3.3rem;
+  background-image: url("../images/icon-todo.svg");
+}
+
+.features-links .nav-link.calendar::after {
+  width: 2rem;
+  height: 2rem;
+  left: -3.4rem;
+  background-image: url("../images/icon-calendar.svg");
+}
+
+.features-links .nav-link.reminders::after {
+  width: 1.5rem;
+  height: 2rem;
+  left: -3.1rem;
+  background-image: url("../images/icon-reminders.svg");
+}
+
+.features-links .nav-link.planning::after {
+  width: 2rem;
+  height: 2rem;
+  left: -3.4rem;
+  background-image: url("../images/icon-planning.svg");
+}
+
+.nav-link-wrapper:nth-of-type(2) .company-links .nav-link::after {
+  content: none;
+}
+
+.nav-link-wrapper:nth-of-type(1) .feature-links .nav-link,
+.nav-link-wrapper:nth-of-type(2) .company-links .nav-link {
+  margin: 0;
 }
 
 /* Main */
@@ -318,9 +386,66 @@ img {
     border: 1px solid var(--black);
   }
 
-  .nav-link-wrapper:nth-of-type(1) .nav-link:hover::after,
+  .nav-link-wrapper:nth-of-type(1)
+    .nav-link:hover::after:not(".featuress-links"),
   .nav-link-wrapper:nth-of-type(2) .nav-link:hover::after {
     background-image: url("../images/icon-arrow-down-hover.svg");
+  }
+
+  .nav-link-wrapper:nth-of-type(1) .nav-link.active:hover::after,
+  .nav-link-wrapper:nth-of-type(2) .nav-link.active:hover::after {
+    background-image: url("../images/icon-arrow-up-hover.svg");
+  }
+
+  .nav-link-wrapper:nth-of-type(1),
+  .nav-link-wrapper:nth-of-type(2) {
+    position: relative;
+  }
+
+  .features-links,
+  .company-links {
+    position: absolute;
+    background: var(--pure-white);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.149126);
+    border-radius: 10px;
+    margin: 2rem 0 0 0;
+    line-height: 1.4rem;
+  }
+
+  .features-links {
+    padding: 2.4rem 2.4rem 2.4rem 5.4rem;
+    margin: 2rem 0 0 0;
+    right: 0;
+  }
+
+  .company-links {
+    width: 11.6rem;
+    padding: 2.4rem 2.6rem 2.4rem 2.5rem;
+    left: 0;
+  }
+
+  .features-links .nav-link.todo::after {
+    width: 1.4rem;
+    height: 1.6rem;
+    left: -2.9rem;
+  }
+
+  .features-links .nav-link.calendar::after {
+    width: 1.6rem;
+    height: 1.6rem;
+    left: -3rem;
+  }
+
+  .features-links .nav-link.reminders::after {
+    width: 1.2rem;
+    height: 1.6rem;
+    left: -2.8rem;
+  }
+
+  .features-links .nav-link.planning::after {
+    width: 1.6rem;
+    height: 1.6rem;
+    left: -2.8rem;
   }
 
   /* Main */
