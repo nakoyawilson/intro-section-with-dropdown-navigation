@@ -7,6 +7,7 @@
   --medium-gray: hsl(0, 0%, 41%);
   --black: hsl(0, 0%, 8%);
   --black-transparent: hsla(0, 0%, 8%, 0.75);
+  --black-shadow: rgba(0, 0, 0, 0.149126);
   --blue: hsl(228, 45%, 44%);
 }
 
@@ -125,14 +126,14 @@ img {
 .nav-link-wrapper:nth-of-type(1) .nav-link::after,
 .nav-link-wrapper:nth-of-type(2) .nav-link::after {
   content: "";
-  width: 0.8rem;
-  height: 0.4rem;
+  width: 1rem;
+  height: 0.6rem;
   background-image: url("../images/icon-arrow-down.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   position: absolute;
-  right: -1.6rem;
+  right: -2.4rem;
   top: 0;
   bottom: 0;
   margin-top: auto;
@@ -323,6 +324,11 @@ img {
     align-items: center;
   }
 
+  .logo {
+    align-self: flex-start;
+    margin-top: 1.1rem;
+  }
+
   .nav-wrapper {
     background-color: var(--white);
     position: static;
@@ -375,7 +381,7 @@ img {
   }
 
   .member-link.register {
-    border: 1px solid var(--medium-gray);
+    border: 2px solid var(--medium-gray);
     border-radius: 14px;
     width: 10.4rem;
     height: 4.2rem;
@@ -390,7 +396,12 @@ img {
   }
 
   .member-link.member-link.register:hover {
-    border: 1px solid var(--black);
+    border: 2px solid var(--black);
+  }
+
+  .nav-link-wrapper:nth-of-type(1) .nav-link::after,
+  .nav-link-wrapper:nth-of-type(2) .nav-link::after {
+    right: -1.6rem;
   }
 
   .nav-link-wrapper:nth-of-type(1)
@@ -409,11 +420,17 @@ img {
     position: relative;
   }
 
+  .nav-link-wrapper:nth-of-type(1) .nav-link,
+  .nav-link-wrapper:nth-of-type(2) .nav-link {
+    position: relative;
+    margin-right: 1.6rem;
+  }
+
   .features-links,
   .company-links {
     position: absolute;
     background: var(--pure-white);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.149126);
+    box-shadow: 0 10px 40px var(--black-shadow);
     border-radius: 10px;
     margin: 2rem 0 0 0;
     line-height: 1.4rem;
