@@ -64,7 +64,7 @@ img {
 
 .header {
   width: min(91.46667%, 34.3rem);
-  margin: 2.4rem auto 0;
+  margin: 2.1rem auto 0;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
