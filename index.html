@@ -53,36 +53,49 @@
       </div>
     </header>
     <main class="main">
-      <h1 class="main-heading">
-        Make <span class="new-line">remote work</span>
-      </h1>
-      <p class="paragraph">
-        Get your team in sync, no matter your location. Streamline processes,
-        create team rituals, and watch productivity soar.
-      </p>
-      <a href="#" class="btn-link">Learn more</a>
-      <div class="client-logos-container">
-        <img
-          src="images/client-databiz.svg"
-          alt="Databiz logo"
-          class="client-logo databiz"
+      <picture>
+        <source
+          media="(max-width: 839px)"
+          srcset="images/image-hero-mobile.png"
         />
-        <img
-          src="images/client-audiophile.svg"
-          alt="Audiophile logo"
-          class="client-logo audiophile"
+        <source
+          media="(min-width: 840px)"
+          srcset="images/image-hero-desktop.png"
         />
-        <img
-          src="images/client-meet.svg"
-          alt="Meet logo"
-          class="client-logo meet"
-        />
-        <img
-          src="images/client-maker.svg"
-          alt="Maker logo"
-          class="client-logo maker"
-        />
-      </div>
+        <img src="images/image-hero-mobile.png" alt="" class="hero-img" />
+      </picture>
+      <section class="text-content">
+        <h1 class="main-heading">
+          Make <span class="new-line">remote work</span>
+        </h1>
+        <p class="paragraph">
+          Get your team in sync, no matter your location. Streamline processes,
+          create team rituals, and watch productivity soar.
+        </p>
+        <a href="#" class="btn-link">Learn more</a>
+        <div class="client-logos-container">
+          <img
+            src="images/client-databiz.svg"
+            alt="Databiz logo"
+            class="client-logo databiz"
+          />
+          <img
+            src="images/client-audiophile.svg"
+            alt="Audiophile logo"
+            class="client-logo audiophile"
+          />
+          <img
+            src="images/client-meet.svg"
+            alt="Meet logo"
+            class="client-logo meet"
+          />
+          <img
+            src="images/client-maker.svg"
+            alt="Maker logo"
+            class="client-logo maker"
+          />
+        </div>
+      </section>
     </main>
     <footer>
       <p class="attribution">
