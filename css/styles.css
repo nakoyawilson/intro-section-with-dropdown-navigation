@@ -60,10 +60,10 @@ img {
 
 .header {
   width: min(91.46667%, 34.3rem);
-  margin: 1.6rem auto 0;
+  margin: 2.4rem auto 0;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .logo {
@@ -80,6 +80,12 @@ img {
   z-index: 10;
   display: flex;
   justify-content: flex-end;
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.nav-wrapper.open {
+  transform: translateX(0);
 }
 
 .navigation {
