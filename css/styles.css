@@ -192,6 +192,7 @@ img {
   text-align: center;
   letter-spacing: -0.222222px;
   padding: 1.2rem 2rem 1rem 2.4rem;
+  border: 1px solid transparent;
 }
 
 .client-logos-container {
@@ -280,6 +281,7 @@ img {
   .nav-link {
     font-size: 1.4rem;
     line-height: 1.6rem;
+    transition: all 0.2s ease-in-out;
   }
 
   .member-links {
@@ -293,16 +295,31 @@ img {
     font-size: 1.4rem;
     line-height: 1.6rem;
     color: var(--medium-gray);
+    transition: all 0.2s ease-in-out;
   }
 
   .member-link.register {
-    border: 1.5px solid var(--medium-gray);
+    border: 1px solid var(--medium-gray);
     border-radius: 14px;
     width: 10.4rem;
     height: 4.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .nav-link:hover,
+  .member-link:hover {
+    color: var(--black);
+  }
+
+  .member-link.member-link.register:hover {
+    border: 1px solid var(--black);
+  }
+
+  .nav-link-wrapper:nth-of-type(1) .nav-link:hover::after,
+  .nav-link-wrapper:nth-of-type(2) .nav-link:hover::after {
+    background-image: url("../images/icon-arrow-down-hover.svg");
   }
 
   /* Main */
@@ -352,6 +369,13 @@ img {
     line-height: 2.8rem;
     letter-spacing: -0.25px;
     padding: 1.5rem 2.8rem 1.3rem 3.1rem;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .btn-link:hover {
+    border: 1px solid var(--black);
+    background-color: var(--white);
+    color: var(--black);
   }
 
   .client-logos-container {
