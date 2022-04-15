@@ -15,6 +15,13 @@ const closeMenu = () => {
 };
 
 const toggleActive = (e) => {
+  console.log(e.target.classList);
+  if (e.target.classList.contains("active")) {
+    e.target.nextSibling.nextSibling.setAttribute("closing", "");
+    e.target.nextSibling.nextSibling.addEventListener("animationend", () => {
+      e.target.nextSibling.nextSibling.removeAttribute("closing");
+    });
+  }
   e.target.classList.toggle("active");
 };
 

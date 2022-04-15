@@ -156,9 +156,16 @@ img {
   display: none;
 }
 
+.features-links[closing],
+.company-links[closing] {
+  display: flex;
+  animation: slide-up 0.5s forwards, fade-out 0.5s forwards;
+}
+
 .nav-link-wrapper:nth-of-type(1) .nav-link.active + .features-links,
 .nav-link-wrapper:nth-of-type(2) .nav-link.active + .company-links {
   display: flex;
+  animation: slide-down 0.5s forwards, fade-in 0.5s forwards;
 }
 
 .features-links {
@@ -387,7 +394,7 @@ img {
   }
 
   .nav-link-wrapper:nth-of-type(1)
-    .nav-link:hover::after:not(".featuress-links"),
+    .nav-link:hover::after:not(feature-links nav-link),
   .nav-link-wrapper:nth-of-type(2) .nav-link:hover::after {
     background-image: url("../images/icon-arrow-down-hover.svg");
   }
@@ -540,5 +547,42 @@ img {
 
   .text-content {
     margin: 10.4rem auto 0 0;
+  }
+}
+
+/* Animations */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-down {
+  0% {
+    transform: translateY(-15%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-15%);
   }
 }
